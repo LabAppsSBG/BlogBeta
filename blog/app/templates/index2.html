@@ -1,0 +1,26 @@
+
+{% extends "base2.html" %}
+
+{% load staticfiles %}
+
+
+{%block post%}
+{{block.super}}
+
+{% for articulo in articulos%}
+		<div class="col-md-4 praesent">
+								<div class="l_g_r">
+									<div class="dapibus">
+										<h2>{{articulo.titulo}} </h2>
+										<p class="adm">Posted by <a href="#">{{articulo.creador.nombre}}</a>  |  7 days ago</p>
+										<a href="details.html"><img src="{{articulo.imageportada.image.url}}" 
+										class="img-responsive" alt=""></a>
+										<p>{{articulo.cuerpo}} </p>
+										<a href="details.html" class="link">Leer mas</a>
+									</div>
+								</div>
+							</div>
+   {%endfor%}
+			
+{% endblock post %}
+

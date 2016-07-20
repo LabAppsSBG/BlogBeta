@@ -1,0 +1,26 @@
+
+{% extends "baseindex.html" %}
+
+{% load staticfiles %}
+
+
+{%block post%}
+{{block.super}}
+
+
+		<div class="col-md-4 praesent">
+								<div class="l_g_r">
+									<div class="dapibus">
+										<h2>Praesent dapibusneque id cursus faucioibus tortor neque tiegetas augue</h2>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  7 days ago</p>
+										<a href="details.html"><img src="{% static  'dist/web2/images/img1.jpg' %}" 
+										class="img-responsive" alt=""></a>
+										<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+							</div>
+   
+			
+{% endblock post %}
+

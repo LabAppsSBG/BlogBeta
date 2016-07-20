@@ -1,0 +1,18 @@
+{% extends "baseviews.html" %}
+
+{% load static %}
+{%if error%}
+
+                      <div class="alert alert-success">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+
+        {{error}}</div>
+       
+
+
+        {% endif%}
+
+
+{% block post %}
+
+{%endblock post%}
