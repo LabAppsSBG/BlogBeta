@@ -1,22 +1,7 @@
 from __future__ import unicode_literals
-
 from django.db import models
 
-# Create your models here.
 
-class Usuario(models.Model):
-	nombre=models.CharField(max_length = 50 , null=True)
-	correo=models.CharField(max_length = 50 , null=True)
-	clave=models.CharField(max_length = 50 , null=True)
-
-
-
-	def __str__(self):
-		#retornar cadena no tupla
-		return (self.nombre.encode('utf8'))
-		#class meta sirve para poner algunas funciones entre ellas ordenar
-	class Meta:
-		ordering=['nombre']
 
 class imgportada(models.Model):
 	image=models.ImageField(upload_to='photos',blank=True, null=True)

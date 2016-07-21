@@ -1,10 +1,7 @@
-
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse
 from app.models import Usuario,articulo,comentario
 from django.template import RequestContext
-
-# Create your views here.
 
 def crear2(request):
 	creado=""
@@ -19,7 +16,8 @@ def crear2(request):
 		p1.save()
 		creado="registro exitoso"
 	else:
-		creado=""	
+		creado=""
+
 	return render(request,crear ,{'error':creado})
 
 def mostrartarticulo(request):
@@ -30,7 +28,6 @@ def mostrartarticulo(request):
 def index(request):
 	pagina="index2.html"
 	articulos=articulo.objects.all()
-
 
 	return render(request,pagina,{"articulos":articulos})
 
