@@ -1,12 +1,12 @@
 from __future__ import unicode_literals
 from django.db import models
-from apps.usuarios.models import User
+from apps.usuarios.models import Usuario
 
 class imgportada(models.Model):
     image = models.ImageField(upload_to='photos', blank=True, null=True)
 
 class articulo(models.Model):
-    creador = models.ForeignKey(User)
+    creador = models.ForeignKey(Usuario)
     imageportada = models.ForeignKey(imgportada, default=1)
 
     # ManyToManyField(Autor) relacion muchos a muchos
